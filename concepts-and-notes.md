@@ -1,6 +1,6 @@
-# Concepts
+# Concepte
 
-totul este un obiect
+în Python totul este un obiect
 
 variabila este o referință către un obiect din memorie
 
@@ -16,20 +16,27 @@ iterator = ?
 
 Python is self-documenting
 
-# data types
+
+# Data types
 
 int
 float
 str
 bool
 
-# operatori
+tuple
+list    # mutable
+
+
+# Operatori
 
 ## specifici Python
+
 //  partea întreagă a împărțirii
 %   restul împărțirii
 
 ## în context boolean
+
 and
 or
 not
@@ -38,13 +45,14 @@ in
 not in
 
 
-# debugging essentials
+# Debugging essentials
 
 print()
 help()
 
 
-# excepții importante
+# Excepții importante
+
 NameError:      simbolul nu a fost definit
 TypeError:      apare când a existat o operațiune
                 invalidă între două data type-uri

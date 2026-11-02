@@ -39,10 +39,14 @@ lst.count("un elem")
 s.index("ziua") # 5
 #s.index("ziuax") # ValueError
 lst.index("un elem") # 0
-lst.index("un elemx") # ValueError
+#lst.index("un elemx") # ValueError
 
 # 6. suportă operatorii `in` și `not in`
 "un elem" in lst
+"un elemx" not in lst
+
+
+#####
 
 
 # alt datatype iterabil: range.
@@ -65,7 +69,7 @@ for elem in repeat('ceva', 5):
 # bi-dimensională
 
 # dată fiind structura de date
-# a cărei elemente sunt tuple de forma
+# ale cărei elemente sunt tuple de forma
 # (name, distance)
 cities = [
     ('Cluj-Napoca', 450),
@@ -107,11 +111,8 @@ for elem in cities:
 # vrem să creăm o funcție de filtrare
 def filter_cities_by_distance(lst, distance):
     pass
-# ce returnează o listă nouă cu orașele filtrate
+# ce returnează o listă nouă cu orașele filtrate.
 # folosiți metoda .append(elem) a listei
-
-def filter_cities_by_distance(lst, distance):
-    pass
 
 def filter_cities_by_distance(lst, distance):
     # pattern de acumulare:

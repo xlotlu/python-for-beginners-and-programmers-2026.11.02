@@ -71,7 +71,7 @@ def get_current_greeting():
     hour = now.hour
     return get_greeting_for_hour(hour)
 
-# nu faceți așa ceva, că... readability matters
+# nu faceți așa ceva, pt. că readability matters
 def get_current_greeting():
     return get_greeting_for_hour(datetime.now().hour)
 
@@ -95,7 +95,7 @@ def greet_user():
 # - și apoi face print expresiei
 #   "<greeting> <name>!"
 
-# the glue function, tieing everything together
+# the glue function, tying everything together
 def greet_user():
     name = get_user_name()
     greeting = get_current_greeting()
@@ -104,7 +104,7 @@ def greet_user():
     print(
         "%s %s!" % (greeting, name) # old-school string interpolation
     )
-    # new-school string interpolation (formatting)
+    # new-school string interpolation ("string formatting")
     "{} {}!".format(greeting, name)
     "{greet} {name}!".format(greet=greeting, name=name)
     # ultima variațiune: "f-string"

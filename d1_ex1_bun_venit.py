@@ -37,6 +37,3 @@ print(greeting)
 
 # dacă am vrea să scriem totul într-o singură linie?
 print("Salut %s!" % input("Cum te numești? "))
-
-
-print("doar chestia asta")
