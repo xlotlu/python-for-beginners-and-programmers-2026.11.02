@@ -113,6 +113,4 @@ def greet_user():
         f"{greeting} {name}!"
     )
 
-
-
 greet_user()

@@ -12,6 +12,10 @@ operatorii sunt dependenți de data type-ul asupra cărora acționează
 reprezentare a unui data type: felul în care apare în terminalul de Python
 
 
+iterator = ?
+
+Python is self-documenting
+
 # data types
 
 int
@@ -30,6 +34,15 @@ and
 or
 not
 
+in
+not in
+
+
+# debugging essentials
+
+print()
+help()
+
 
 # excepții importante
 NameError:      simbolul nu a fost definit
@@ -37,6 +50,8 @@ TypeError:      apare când a existat o operațiune
                 invalidă între două data type-uri
 ValueError:     când valoarea respectivă este invalidă
                 în context
+
+IndexError:     când indexul accesat nu există
                 
 # lucrat cu VSCode:
 
