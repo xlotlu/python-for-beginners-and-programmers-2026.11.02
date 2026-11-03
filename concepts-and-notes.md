@@ -4,7 +4,7 @@
 
 variabila este o referință către un obiect din memorie
 
-în Python totul(!) este o referință
+în Python totul(!) este o referință către obiectul din spate
 
 
 operatorii sunt dependenți de data type-ul asupra cărora acționează
@@ -15,6 +15,19 @@ reprezentare a unui data type: felul în care apare în terminalul de Python
 iterator = ?
 
 Python is self-documenting
+
+în Python totul poate fi evaluat în context boolean
+
+în Python toți operatorii rulează o metodă a obiectului
+asupra căruia operează
+
+
+# De citit
+
+(măcar o dată în viața de programator Python)
+
+String formatting examples:
+https://docs.python.org/3/library/string.html#format-examples
 
 
 # Data types
@@ -34,6 +47,7 @@ list    # mutable
 
 //  partea întreagă a împărțirii
 %   restul împărțirii
+**  ridicare la putere
 
 ## în context boolean
 
@@ -44,6 +58,8 @@ not
 in
 not in
 
+is
+is not
 
 # Debugging essentials
 
@@ -65,3 +81,11 @@ IndexError:     când indexul accesat nu există
 
 Ctrl+F5         run file
 Shift+Enter     execute selection
+
+
+# varia
+There are 2 very difficult problems in computing:
+- naming things
+- cache invalidation
+- off-by-one errors
+
