@@ -69,7 +69,7 @@ from collections import deque
 
 dq = deque(range(10))
 dq.appendleft("ceva")
-dq.popleft("ceva")
+dq.popleft()
 
 # notă despre deque, are opțional maxlen
 # cu care se pot face
@@ -126,3 +126,127 @@ cheie-valoare:
 
 și apoi face comparație pe chei
 """
+
+# dată fiind lista
+cities = [
+    ('Cluj-Napoca', 450),
+    ('Timișoara', 550),
+    ('Iași', 390),
+    ('Constanța', 225),
+    ('Brașov', 170),
+    ('Craiova', 230),
+    ('Galați', 250),
+    ('Oradea', 600),
+    ('Ploiești', 60),
+    ('Brăila', 200),
+    ('Arad', 530),
+    ('Pitești', 120),
+    ('Sibiu', 280),
+    ('Bacău', 300),
+    ('Târgu Mureș', 340),
+    ('Baia Mare', 600),
+    ('Buzău', 110),
+    ('Satu Mare', 640),
+    ('Suceava', 450),
+    ('Focșani', 190),
+]
+# sortați-o în ordinea crescătoare a distanțelor
+
+# lst.sort(key=sorting_function)
+# unde sorting_function primește un element
+# și returnează o valoare, pe care se execută sortarea
+
+def sorting_function(elem):
+    return elem[1]
+cities.sort(key=sorting_function)
+
+print(cities)
+
+# scrieți o funcție
+def filter_cities(lst, distance):
+    pass
+# ce returnează o listă nouă cu elementele
+# (oraș, distanță) cu distanța <= distance
+
+def filter_cities(lst, distance):
+    result = []
+    for city in lst:
+        if city[1] <= distance:
+           result.append(city)
+    return result
+
+print(
+    filter_cities(cities, 100)
+)
+print(
+    filter_cities(cities, 200)
+)
+print(
+    filter_cities(cities, 300)
+)
+
+# exemplu cu filter:
+def filter_less_than_200(item):
+    return item[1] < 200
+
+for elem in filter(filter_less_than_200, cities):
+    print(elem)
+
+
+# funcția rescrisă cu filter,
+# ne bazam pe abilitatea de a construi o funcție
+# dinamic în interiorul altei funcții
+def filter_cities(lst, distance):
+    def filter_fn(item):
+        return item[1] < distance
+
+    return filter(filter_fn, lst)
+
+# concept nou:
+# lambda function. sintaxa:
+# lambda <arguments>: return_value
+lambda: 5                   # o funcție ce returnează 5
+lambda x, y: x * y          # o funcție ce înmulțește x cu y
+
+myfunc = lambda x, y: x * y
+myfunc(2, 3)
+
+# rescrieți filter_cities cu lambda
+def filter_cities(lst, distance):
+    return filter(
+        lambda item: item[1] < distance,
+        lst
+    )
+
+# modificați funcția de mai sus
+# astfel încât:
+# 0) să filtreze după `distance`
+# 1) să returneze elementele în ordinea
+#    descrescătoare a distanței, și
+# 2) să accepte argumentul opțional `limit`
+#    care limitează numărul de elemente
+#    din lista rezultată
+def filter_cities(lst, distance, limit=None):
+    filtered = filter(
+        lambda item: item[1] < distance,
+        lst
+    )
+    result = list(filtered)
+    result.sort(key=lambda item: item[1], reverse=True)
+
+    if limit is None:
+        return result
+    else:
+        return result[:limit]
+
+# concept:
+# ternary operator
+
+
+# exemplu:
+# filter_cities(cities, 200, limit=2)
+#   --> [('Buzău', 110), ('Ploiești', 60)]
+
+
+
+

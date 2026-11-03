@@ -6,20 +6,19 @@ variabila este o referință către un obiect din memorie
 
 în Python totul(!) este o referință către obiectul din spate
 
-
 operatorii sunt dependenți de data type-ul asupra cărora acționează
 
 reprezentare a unui data type: felul în care apare în terminalul de Python
 
-
-iterator = ?
+iterator = un obiect iterabil, care execută cod în timpul iterației
+           și își suspendă execuția după fiecare element returnat
 
 Python is self-documenting
 
 în Python totul poate fi evaluat în context boolean
 
-în Python toți operatorii rulează o metodă a obiectului
-asupra căruia operează
+în Python operatorii execută de fapt o metodă
+a obiectului asupra căruia operează
 
 
 # De citit
@@ -77,6 +76,16 @@ ValueError:     când valoarea respectivă este invalidă
 
 IndexError:     când indexul accesat nu există
                 
+
+# pachete utile / importante
+
+un package se instalează cu:
+
+pip install nume_pachet
+
+ipython
+rich
+
 # lucrat cu VSCode:
 
 Ctrl+F5         run file
@@ -84,8 +93,8 @@ Shift+Enter     execute selection
 
 
 # varia
+
 There are 2 very difficult problems in computing:
 - naming things
 - cache invalidation
 - off-by-one errors
-
