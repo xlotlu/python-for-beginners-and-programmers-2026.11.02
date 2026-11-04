@@ -54,7 +54,7 @@ and
 or
 not
 
-in
+in          # element in iterable, unde este suportat
 not in
 
 is
@@ -75,13 +75,15 @@ ValueError:     când valoarea respectivă este invalidă
                 în context
 
 IndexError:     când indexul accesat nu există
+KeyError:       când cheia respectivă nu există
                 
 
 # pachete utile / importante
 
 un package se instalează cu:
 
-pip install nume_pachet
+pip install nume_pachet # (în system shell)
+
 
 ipython
 rich

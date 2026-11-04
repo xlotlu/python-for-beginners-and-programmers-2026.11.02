@@ -63,6 +63,17 @@ s.lower()
 s.upper()
 
 
+### semi-utile
+
+# șterg prefixul respectiv sufixul
+# dacă există, exact string-ul specificat
+s.removeprefix("...")
+s.removesuffix("...")
+
+s.startswith("substr")
+s.endswith("substr")
+
+
 ### rarely used:
 s.center(20, ' '), s.ljust(20, ' '), s.rjust(20, ' ')
 
