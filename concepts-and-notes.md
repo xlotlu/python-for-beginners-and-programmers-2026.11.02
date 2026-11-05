@@ -20,10 +20,16 @@ Python is self-documenting
 în Python operatorii execută de fapt o metodă
 a obiectului asupra căruia operează
 
+callable = o funcție (sau metodă), o clasă
+           [!!] oare poate să mai și altceva?
+
 
 # De citit
 
 (măcar o dată în viața de programator Python)
+
+The Styleguide:
+https://peps.python.org/pep-0008/
 
 String formatting examples:
 https://docs.python.org/3/library/string.html#format-examples
@@ -64,13 +70,20 @@ is not
 
 print()
 help()
-
+type()      returnează clasa din care a fost instanțiat obiectul
+dir(object) toate atributele obiectului
+locals()    variabilele definite local
+globals()   variabilele definite global
 
 # Excepții importante
 
+SyntaxError     evident
+
 NameError:      simbolul nu a fost definit
 TypeError:      apare când a existat o operațiune
-                invalidă între două data type-uri
+                invalidă între două data type-uri;
+                și apare când un callable primește
+                argumente invalide
 ValueError:     când valoarea respectivă este invalidă
                 în context
 
@@ -87,6 +100,10 @@ pip install nume_pachet # (în system shell)
 
 ipython
 rich
+
+
+from rich import pretty
+pretty.install()
 
 # lucrat cu VSCode:
 
