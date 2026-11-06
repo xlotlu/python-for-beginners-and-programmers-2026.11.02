@@ -45,3 +45,13 @@ print(mymodule.MY_VAR)
 
 ##### our own package
 import mypackage
+
+
+# modulele sunt importate din prima locație
+# găsită în `sys.path`
+# pe care puteți să-l modificați din interiorul aplicației
+# (în general nu este recomandat ca aplicația să facă manipulări de path)
+#
+# varianta recomandată: variabila de sistem
+# (setată înainte să se pornească python-ul) numită PYTHONPATH.
+# are forma PYTHONPATH=director1

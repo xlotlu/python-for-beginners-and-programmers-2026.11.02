@@ -34,6 +34,13 @@ https://peps.python.org/pep-0008/
 String formatting examples:
 https://docs.python.org/3/library/string.html#format-examples
 
+Date formatting codes:
+https://docs.python.org/3/library/datetime.html#format-codes
+
+
+```python
+import this
+```
 
 # Data types
 
@@ -98,12 +105,27 @@ un package se instalează cu:
 pip install nume_pachet # (în system shell)
 
 
-ipython
-rich
+pip install ipython
 
+```
+%load_ext autoreload
+%autoreload 2
+```
 
+pip install rich
+
+```python
 from rich import pretty
 pretty.install()
+```
+
+pip install ipdb
+
+```python
+import ipdb
+ipdb.set_trace()
+```
+
 
 # lucrat cu VSCode:
 
